@@ -1186,13 +1186,20 @@ to make your day</h1>
             <p class="text-gray-600 mb-8 max-w-xl mx-auto mt-8">
                 Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim 
             </p>
-            <div class="flex max-w-md mx-auto items-center relative">
-                <input type="email" placeholder="Your email address..." 
-                       class="flex-1 px-6 py-4 rounded-2xl bg-white focus:outline-none  ">
-                <button class="bg-black text-white px-8 py-3 rounded-2xl hover:bg-gray-800 transition-colors absolute right-1 top-1 font-semibold  ">
+            <form class="hidden md:flex flex-col md:flex-row max-w-md mx-auto items-center relative overflow-hidden">
+                <input type="email" placeholder="Your email address..."
+                       class="flex-1 px-6 py-4 rounded-2xl bg-white focus:outline-none   ">
+                <button class=" bg-black text-white px-8 py-3 rounded-2xl hover:bg-gray-800 transition-colors  absolute  right-1  top-1 font-semibold  text-sm md:text-base mt-10 md:mt-0 ">
                     Subscribe
                 </button>
-            </div>
+            </form>
+            <form class="md:hidden flex flex-col max-w-md mx-auto items-center gap-4 relative ">
+                <input type="email" placeholder="Your email address..."
+                       class="flex-1 px-6 py-4 rounded-2xl bg-white focus:outline-none   ">
+                <button class=" bg-black text-white px-8 py-3 rounded-2xl hover:bg-gray-800 transition-colors     relative top-9 font-semibold  text-sm md:text-base mt-10 md:mt-0 ">
+                    Subscribe
+                </button>
+            </form>
         </div>
     </section>
     <!-- End CTA -->

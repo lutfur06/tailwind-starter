@@ -52,3 +52,8 @@ background: linear-gradient(180deg, rgba(112, 130, 70, 0.00) 0%, rgba(112, 130, 
     opacity: 1;
    z-index: 999999;
 }
+.cta-button{
+    display: block;
+    margin: 10px;
+
+}
