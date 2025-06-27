@@ -1,1 +1,54 @@
 @import "tailwindcss";
+.slick-track {
+    display: flex !important;
+}
+
+.slick-slide {
+    display: flex !important;
+    height: auto !important;
+}
+
+/* Default opacity for all slides */
+.slick-slide {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+/* Full opacity only for the center slide */
+.slick-center {
+  opacity: 1 !important;
+}
+
+/* Position */
+.slick-prev,
+.slick-next {
+  top: 50%;
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  transform: translateY(-50%);
+  z-index: 10;
+
+}
+.slick-prev {
+  left: 20px; /* Adjust as needed */
+}
+.slick-next {
+  right: 20px; /* Adjust as needed */
+}
+
+
+.slick-next::before,
+.slick-prev::before {
+  content: '';
+}
+.shape-gradient {
+    width: 180px;
+height: 152px;
+flex-shrink: 0;
+  border-radius: 30px;
+background: linear-gradient(180deg, rgba(112, 130, 70, 0.00) 0%, rgba(112, 130, 70, 0.10) 100%);
+}
+.main-recipie:hover .hover-recipie {
+    opacity: 1;
+   z-index: 999999;
+}
