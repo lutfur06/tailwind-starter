@@ -53,4 +53,6 @@ background: linear-gradient(180deg, rgba(112, 130, 70, 0.00) 0%, rgba(112, 130, 
    z-index: 999999;
 }
 
-
+.try-deli > div:hover {
+    box-shadow: 5px 5px 5px lightgrey ;
+}
