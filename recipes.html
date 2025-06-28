@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Foodieland</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    link slick and inter font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-['Inter']">
+<header class="bg-white">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 " aria-label="Global">
+        <div class="flex md:flex-1 md:mr-2">
+            <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Foodieland</span>
+                <img class="h-8 w-auto" src="assets/Foodieland.png" alt=""/>
+            </a>
+        </div>
+        <div class="flex md:hidden">
+            <button type="button" aria-label="Open main menu"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Open main menu</span>
+                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden md:flex md:gap-x-12">
+
+            <a href="index.html" class=" font-semibold text-gray-900" aria-expanded="false">
+                Home
+            </a>
+            <a href="recipe.html" class=" font-semibold text-gray-900">Recipies</a>
+            <a href="blog.html" class=" font-semibold text-gray-900">Blog</a>
+            <a href="contact.html" class=" font-semibold text-gray-900">Contact</a>
+            <a href="about.html" class=" font-semibold text-gray-900">About Us</a>
+        </div>
+        <div class="hidden md:flex md:flex-1 md:justify-end gap-x-4">
+            <a href="#" class="text-sm/6 font-semibold text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                    <path
+                            d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#" class="text-sm/6 font-semibold text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                    <path
+                            d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#" class="text-sm/6 font-semibold text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                    <path
+                            d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="md:hidden hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-5 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between ">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img class="h-8 w-auto" src="assets/Foodieland.png" alt=""/>
+                </a>
+                <button type="button" aria-label="Close menu" class="-ml-3 rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-8 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+
+                    <a href="index.html"
+                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
+                    <a href="recipe.html"
+                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Recipies</a>
+                    <a href="blog.html"
+                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a>
+                    <a href="contact.html"
+                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact</a>
+                    <a href="about.html"
+                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">About
+                        Us</a>
+                </div>
+                <div class="py-6 flex items-center  gap-x-4">
+                    <a href="#"
+                       class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                            <path
+                                    d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#"
+                       class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                            <path
+                                    d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#"
+                       class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                            <path
+                                    d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<div class="border-b border-slate-300"></div>
+
+<!-- Hero Section -->
+<div class="pb-20 overflow-y-scroll relative inter">
+    <section class="relative flex justify-center items-center mt-10 gap-20">
+        <div class="w-[95%] sm:w-[90%] flex flex-col justify-center items-center gap-5">
+            <div class="flex flex-col justify-between items-center"><h1
+                    class="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-4 aos-init aos-animate"
+                    data-aos="fade-left">Recipes</h1>
+                <h2 class="font-normal text-xs sm:text-sm lg:text-base text-center text-gray-500 mb-8 aos-init aos-animate"
+                    data-aos="fade-right">Here is a list of all the recipes we have to offer. Use the filters below to
+                    find your favorite recipes.</h2></div>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 w-full aos-init aos-animate"
+                 data-aos="fade-up" data-aos-delay="100"><input type="text" placeholder="Search for a recipe..."
+                                                                class="w-full sm:w-[50%] rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                                                value=""></div>
+            <div class="w-full flex flex-col sm:flex-row sm:justify-center sm:items-baseline gap-4 sm:gap-8">
+                <div class="flex flex-col aos-init aos-animate" data-aos="fade-right" data-aos-delay="200">
+                    <div class="relative"><label class="block undefined" for="headlessui-listbox-button-:r1k:"
+                                                 id="headlessui-label-:r1j:" data-headlessui-state="">Filter by
+                        Category</label>
+                        <div class="relative mt-2">
+                            <button class="flex gap-2.5 justify-between items-center w-full cursor-default rounded bg-white text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 text-xs sm:text-sm py-2 px-1 lg:py-4 lg:px-3 undefined"
+                                    id="headlessui-listbox-button-:r1k:" type="button" aria-haspopup="listbox"
+                                    aria-expanded="false" data-headlessui-state=""
+                                    aria-labelledby="headlessui-label-:r1j: headlessui-listbox-button-:r1k:">All
+                                Categories
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                     aria-hidden="true" data-slot="icon"
+                                     class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
+                                    <path fill-rule="evenodd"
+                                          d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative"><label class="block undefined" for="headlessui-listbox-button-:r1r:"
+                                                 id="headlessui-label-:r1q:" data-headlessui-state="">Filter by Cooking
+                        Time</label>
+                        <div class="relative mt-2">
+                            <button class="flex gap-2.5 justify-between items-center w-full cursor-default rounded bg-white text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 text-xs sm:text-sm py-2 px-1 lg:py-4 lg:px-3 undefined"
+                                    id="headlessui-listbox-button-:r1r:" type="button" aria-haspopup="listbox"
+                                    aria-expanded="false" data-headlessui-state=""
+                                    aria-labelledby="headlessui-label-:r1q: headlessui-listbox-button-:r1r:">All Times
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                     aria-hidden="true" data-slot="icon"
+                                     class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
+                                    <path fill-rule="evenodd"
+                                          d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col aos-init aos-animate" data-aos="fade-left" data-aos-delay="200"><h5
+                        class="block ">Filter by favorites</h5>
+                    <button class="flex gap-2.5 justify-between items-center w-full cursor-default rounded bg-white text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 text-xs sm:text-sm py-2 px-1 lg:py-4 lg:px-3 mt-2">
+                        Show Favorites
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-7xl gap-2.5 mt-10">
+                    <div class="relative flex flex-col justify-between gap-4 rounded-2xl p-3 w-full h-full max-w-80 max-h-96 cursor-pointer undefined aos-init aos-animate"
+                         data-aos="fade-down" style="background: linear-gradient(white, rgb(231, 250, 254));">
+                        <div class="flex flex-col gap-4 ">
+                            <figure class="relative overflow-hidden rounded-2xl max w-full md:h-36 max-h-48 xl:h-48">
+                                <div class="absolute top-4 right-4 p-2.5 rounded-full bg-white z-10"><img
+                                        src="data:image/svg+xml,%3csvg%20width='22'%20height='18'%20viewBox='0%200%2022%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.5022%208.2786e-06C14.6291%20-0.00149138%2013.7677%200.200775%2012.9865%200.590718C12.2052%200.980661%2011.5258%201.54752%2011.0022%202.24621C10.293%201.30266%209.30512%200.606001%208.17823%200.254824C7.05134%20-0.0963541%205.84256%20-0.0842713%204.72291%200.289363C3.60327%200.662997%202.62948%201.37926%201.93932%202.3368C1.24916%203.29434%200.877596%204.44467%200.877197%205.62501C0.877197%2012.3621%2010.2373%2017.6813%2010.6357%2017.9044C10.7477%2017.9671%2010.8739%2018%2011.0022%2018C11.1305%2018%2011.2567%2017.9671%2011.3687%2017.9044C13.0902%2016.8961%2014.7059%2015.7173%2016.1914%2014.3856C19.4665%2011.438%2021.1272%208.49047%2021.1272%205.62501C21.1255%204.13368%2020.5323%202.70393%2019.4778%201.6494C18.4233%200.594873%2016.9935%200.00169855%2015.5022%208.2786e-06Z'%20fill='%23DBE2E5'/%3e%3c/svg%3e"
+                                        alt="fav"></div>
+                                <a class="relative" href="/recipes/1" data-discover="true"><img
+                                        src="https://www.foodandwine.com/thmb/XCnfhSG0WHza8XL2oroKwR6mYEE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Best-Spaghetti-Carbonara-Youll-Ever-Eat-Takes-Just-30-Minutes-To-Make-FT-RECIPE-0224_Lead-2caa6dc8f3ef4947bda5fa12c27e1a75.jpg"
+                                        alt="Spaghetti Carbonara"
+                                        class="hover:scale-[1.1] transition-all w-full h-full object-cover"></a>
+                            </figure>
+                            <div class="flex flex-col gap-4"><a
+                                    class="text-xl font-semibold hover:text-blue-500/70 transition" href="/recipes/1"
+                                    data-discover="true">Spaghetti Carbonara</a></div>
+                        </div>
+                        <div class="flex ml-[-8px]">
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img
+                                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.75%201.5H14.25C14.4489%201.5%2014.6397%201.42098%2014.7803%201.28033C14.921%201.13968%2015%200.948912%2015%200.75C15%200.551088%2014.921%200.360322%2014.7803%200.21967C14.6397%200.0790176%2014.4489%200%2014.25%200L9.75%200C9.55109%200%209.36032%200.0790176%209.21967%200.21967C9.07902%200.360322%209%200.551088%209%200.75C9%200.948912%209.07902%201.13968%209.21967%201.28033C9.36032%201.42098%209.55109%201.5%209.75%201.5Z'%20fill='black'/%3e%3cpath%20d='M12%203C10.22%203%208.47991%203.52784%206.99987%204.51677C5.51983%205.50571%204.36628%206.91131%203.68509%208.55585C3.0039%2010.2004%202.82567%2012.01%203.17294%2013.7558C3.5202%2015.5016%204.37737%2017.1053%205.63604%2018.364C6.89472%2019.6226%208.49836%2020.4798%2010.2442%2020.8271C11.99%2021.1743%2013.7996%2020.9961%2015.4442%2020.3149C17.0887%2019.6337%2018.4943%2018.4802%2019.4832%2017.0001C20.4722%2015.5201%2021%2013.78%2021%2012C20.9973%209.61388%2020.0482%207.32626%2018.361%205.63902C16.6737%203.95178%2014.3861%203.0027%2012%203V3ZM16.2426%208.81799L12.5304%2012.5303C12.4607%2012.6%2012.378%2012.6552%2012.2871%2012.6929C12.1961%2012.7306%2012.0985%2012.75%2012%2012.75C11.9015%2012.75%2011.804%2012.7306%2011.713%2012.6929C11.622%2012.6552%2011.5393%2012.6%2011.4697%2012.5304C11.4%2012.4607%2011.3448%2012.378%2011.3071%2012.287C11.2694%2012.1961%2011.25%2012.0985%2011.25%2012C11.25%2011.9015%2011.2694%2011.804%2011.3071%2011.713C11.3448%2011.622%2011.4%2011.5393%2011.4696%2011.4697L15.182%207.75735C15.2516%207.68771%2015.3343%207.63246%2015.4253%207.59477C15.5163%207.55708%2015.6138%207.53767%2015.7123%207.53767C15.8108%207.53767%2015.9083%207.55707%2015.9993%207.59476C16.0903%207.63244%2016.173%207.68769%2016.2426%207.75733C16.3123%207.82697%2016.3675%207.90965%2016.4052%208.00064C16.4429%208.09164%2016.4623%208.18916%2016.4623%208.28766C16.4623%208.38615%2016.4429%208.48368%2016.4052%208.57467C16.3675%208.66567%2016.3123%208.74835%2016.2427%208.81799H16.2426Z'%20fill='black'/%3e%3c/svg%3e"
+                                        alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">30
+                                    minutes</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img src="/assets/ForkKnife-CNi1BqRK.svg" alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">
+                                    Italian</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col justify-between gap-4 rounded-2xl p-3 w-full h-full max-w-80 max-h-96 cursor-pointer undefined aos-init aos-animate"
+                         data-aos="fade-up" style="background: linear-gradient(white, rgb(231, 250, 254));">
+                        <div class="flex flex-col gap-4 ">
+                            <figure class="relative overflow-hidden rounded-2xl max w-full md:h-36 max-h-48 xl:h-48">
+                                <div class="absolute top-4 right-4 p-2.5 rounded-full bg-white z-10"><img
+                                        src="data:image/svg+xml,%3csvg%20width='22'%20height='18'%20viewBox='0%200%2022%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.5022%208.2786e-06C14.6291%20-0.00149138%2013.7677%200.200775%2012.9865%200.590718C12.2052%200.980661%2011.5258%201.54752%2011.0022%202.24621C10.293%201.30266%209.30512%200.606001%208.17823%200.254824C7.05134%20-0.0963541%205.84256%20-0.0842713%204.72291%200.289363C3.60327%200.662997%202.62948%201.37926%201.93932%202.3368C1.24916%203.29434%200.877596%204.44467%200.877197%205.62501C0.877197%2012.3621%2010.2373%2017.6813%2010.6357%2017.9044C10.7477%2017.9671%2010.8739%2018%2011.0022%2018C11.1305%2018%2011.2567%2017.9671%2011.3687%2017.9044C13.0902%2016.8961%2014.7059%2015.7173%2016.1914%2014.3856C19.4665%2011.438%2021.1272%208.49047%2021.1272%205.62501C21.1255%204.13368%2020.5323%202.70393%2019.4778%201.6494C18.4233%200.594873%2016.9935%200.00169855%2015.5022%208.2786e-06Z'%20fill='%23FF6363'/%3e%3c/svg%3e"
+                                        alt="fav"></div>
+                                <a class="relative" href="/recipes/2" data-discover="true"><img
+                                        src="https://res.cloudinary.com/drhyczqfj/image/upload/v1746096877/food19_z2peir.png"
+                                        alt="Chicken Caesar Salad"
+                                        class="hover:scale-[1.1] transition-all w-full h-full object-cover"></a>
+                            </figure>
+                            <div class="flex flex-col gap-4"><a
+                                    class="text-xl font-semibold hover:text-blue-500/70 transition" href="/recipes/2"
+                                    data-discover="true">Chicken Caesar Salad</a></div>
+                        </div>
+                        <div class="flex ml-[-8px]">
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img
+                                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.75%201.5H14.25C14.4489%201.5%2014.6397%201.42098%2014.7803%201.28033C14.921%201.13968%2015%200.948912%2015%200.75C15%200.551088%2014.921%200.360322%2014.7803%200.21967C14.6397%200.0790176%2014.4489%200%2014.25%200L9.75%200C9.55109%200%209.36032%200.0790176%209.21967%200.21967C9.07902%200.360322%209%200.551088%209%200.75C9%200.948912%209.07902%201.13968%209.21967%201.28033C9.36032%201.42098%209.55109%201.5%209.75%201.5Z'%20fill='black'/%3e%3cpath%20d='M12%203C10.22%203%208.47991%203.52784%206.99987%204.51677C5.51983%205.50571%204.36628%206.91131%203.68509%208.55585C3.0039%2010.2004%202.82567%2012.01%203.17294%2013.7558C3.5202%2015.5016%204.37737%2017.1053%205.63604%2018.364C6.89472%2019.6226%208.49836%2020.4798%2010.2442%2020.8271C11.99%2021.1743%2013.7996%2020.9961%2015.4442%2020.3149C17.0887%2019.6337%2018.4943%2018.4802%2019.4832%2017.0001C20.4722%2015.5201%2021%2013.78%2021%2012C20.9973%209.61388%2020.0482%207.32626%2018.361%205.63902C16.6737%203.95178%2014.3861%203.0027%2012%203V3ZM16.2426%208.81799L12.5304%2012.5303C12.4607%2012.6%2012.378%2012.6552%2012.2871%2012.6929C12.1961%2012.7306%2012.0985%2012.75%2012%2012.75C11.9015%2012.75%2011.804%2012.7306%2011.713%2012.6929C11.622%2012.6552%2011.5393%2012.6%2011.4697%2012.5304C11.4%2012.4607%2011.3448%2012.378%2011.3071%2012.287C11.2694%2012.1961%2011.25%2012.0985%2011.25%2012C11.25%2011.9015%2011.2694%2011.804%2011.3071%2011.713C11.3448%2011.622%2011.4%2011.5393%2011.4696%2011.4697L15.182%207.75735C15.2516%207.68771%2015.3343%207.63246%2015.4253%207.59477C15.5163%207.55708%2015.6138%207.53767%2015.7123%207.53767C15.8108%207.53767%2015.9083%207.55707%2015.9993%207.59476C16.0903%207.63244%2016.173%207.68769%2016.2426%207.75733C16.3123%207.82697%2016.3675%207.90965%2016.4052%208.00064C16.4429%208.09164%2016.4623%208.18916%2016.4623%208.28766C16.4623%208.38615%2016.4429%208.48368%2016.4052%208.57467C16.3675%208.66567%2016.3123%208.74835%2016.2427%208.81799H16.2426Z'%20fill='black'/%3e%3c/svg%3e"
+                                        alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">50
+                                    minutes</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img src="/assets/ForkKnife-CNi1BqRK.svg" alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">
+                                    meat</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col justify-between gap-4 rounded-2xl p-3 w-full h-full max-w-80 max-h-96 cursor-pointer undefined aos-init aos-animate"
+                         data-aos="fade-down" style="background: linear-gradient(white, rgb(231, 250, 254));">
+                        <div class="flex flex-col gap-4 ">
+                            <figure class="relative overflow-hidden rounded-2xl max w-full md:h-36 max-h-48 xl:h-48">
+                                <div class="absolute top-4 right-4 p-2.5 rounded-full bg-white z-10"><img
+                                        src="data:image/svg+xml,%3csvg%20width='22'%20height='18'%20viewBox='0%200%2022%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.5022%208.2786e-06C14.6291%20-0.00149138%2013.7677%200.200775%2012.9865%200.590718C12.2052%200.980661%2011.5258%201.54752%2011.0022%202.24621C10.293%201.30266%209.30512%200.606001%208.17823%200.254824C7.05134%20-0.0963541%205.84256%20-0.0842713%204.72291%200.289363C3.60327%200.662997%202.62948%201.37926%201.93932%202.3368C1.24916%203.29434%200.877596%204.44467%200.877197%205.62501C0.877197%2012.3621%2010.2373%2017.6813%2010.6357%2017.9044C10.7477%2017.9671%2010.8739%2018%2011.0022%2018C11.1305%2018%2011.2567%2017.9671%2011.3687%2017.9044C13.0902%2016.8961%2014.7059%2015.7173%2016.1914%2014.3856C19.4665%2011.438%2021.1272%208.49047%2021.1272%205.62501C21.1255%204.13368%2020.5323%202.70393%2019.4778%201.6494C18.4233%200.594873%2016.9935%200.00169855%2015.5022%208.2786e-06Z'%20fill='%23FF6363'/%3e%3c/svg%3e"
+                                        alt="fav"></div>
+                                <a class="relative" href="/recipes/3" data-discover="true"><img
+                                        src="https://res.cloudinary.com/drhyczqfj/image/upload/v1746096861/food18_jersgp.png"
+                                        alt="Big and Juicy Wagyu Beef Cheeseburger"
+                                        class="hover:scale-[1.1] transition-all w-full h-full object-cover"></a>
+                            </figure>
+                            <div class="flex flex-col gap-4"><a
+                                    class="text-xl font-semibold hover:text-blue-500/70 transition" href="/recipes/3"
+                                    data-discover="true">Big and Juicy Wagyu Beef Cheeseburger</a></div>
+                        </div>
+                        <div class="flex ml-[-8px]">
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img
+                                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.75%201.5H14.25C14.4489%201.5%2014.6397%201.42098%2014.7803%201.28033C14.921%201.13968%2015%200.948912%2015%200.75C15%200.551088%2014.921%200.360322%2014.7803%200.21967C14.6397%200.0790176%2014.4489%200%2014.25%200L9.75%200C9.55109%200%209.36032%200.0790176%209.21967%200.21967C9.07902%200.360322%209%200.551088%209%200.75C9%200.948912%209.07902%201.13968%209.21967%201.28033C9.36032%201.42098%209.55109%201.5%209.75%201.5Z'%20fill='black'/%3e%3cpath%20d='M12%203C10.22%203%208.47991%203.52784%206.99987%204.51677C5.51983%205.50571%204.36628%206.91131%203.68509%208.55585C3.0039%2010.2004%202.82567%2012.01%203.17294%2013.7558C3.5202%2015.5016%204.37737%2017.1053%205.63604%2018.364C6.89472%2019.6226%208.49836%2020.4798%2010.2442%2020.8271C11.99%2021.1743%2013.7996%2020.9961%2015.4442%2020.3149C17.0887%2019.6337%2018.4943%2018.4802%2019.4832%2017.0001C20.4722%2015.5201%2021%2013.78%2021%2012C20.9973%209.61388%2020.0482%207.32626%2018.361%205.63902C16.6737%203.95178%2014.3861%203.0027%2012%203V3ZM16.2426%208.81799L12.5304%2012.5303C12.4607%2012.6%2012.378%2012.6552%2012.2871%2012.6929C12.1961%2012.7306%2012.0985%2012.75%2012%2012.75C11.9015%2012.75%2011.804%2012.7306%2011.713%2012.6929C11.622%2012.6552%2011.5393%2012.6%2011.4697%2012.5304C11.4%2012.4607%2011.3448%2012.378%2011.3071%2012.287C11.2694%2012.1961%2011.25%2012.0985%2011.25%2012C11.25%2011.9015%2011.2694%2011.804%2011.3071%2011.713C11.3448%2011.622%2011.4%2011.5393%2011.4696%2011.4697L15.182%207.75735C15.2516%207.68771%2015.3343%207.63246%2015.4253%207.59477C15.5163%207.55708%2015.6138%207.53767%2015.7123%207.53767C15.8108%207.53767%2015.9083%207.55707%2015.9993%207.59476C16.0903%207.63244%2016.173%207.68769%2016.2426%207.75733C16.3123%207.82697%2016.3675%207.90965%2016.4052%208.00064C16.4429%208.09164%2016.4623%208.18916%2016.4623%208.28766C16.4623%208.38615%2016.4429%208.48368%2016.4052%208.57467C16.3675%208.66567%2016.3123%208.74835%2016.2427%208.81799H16.2426Z'%20fill='black'/%3e%3c/svg%3e"
+                                        alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">40
+                                    minutes</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img src="/assets/ForkKnife-CNi1BqRK.svg" alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">
+                                    American</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col justify-between gap-4 rounded-2xl p-3 w-full h-full max-w-80 max-h-96 cursor-pointer undefined aos-init aos-animate"
+                         data-aos="fade-up" style="background: linear-gradient(white, rgb(231, 250, 254));">
+                        <div class="flex flex-col gap-4 ">
+                            <figure class="relative overflow-hidden rounded-2xl max w-full md:h-36 max-h-48 xl:h-48">
+                                <div class="absolute top-4 right-4 p-2.5 rounded-full bg-white z-10"><img
+                                        src="data:image/svg+xml,%3csvg%20width='22'%20height='18'%20viewBox='0%200%2022%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.5022%208.2786e-06C14.6291%20-0.00149138%2013.7677%200.200775%2012.9865%200.590718C12.2052%200.980661%2011.5258%201.54752%2011.0022%202.24621C10.293%201.30266%209.30512%200.606001%208.17823%200.254824C7.05134%20-0.0963541%205.84256%20-0.0842713%204.72291%200.289363C3.60327%200.662997%202.62948%201.37926%201.93932%202.3368C1.24916%203.29434%200.877596%204.44467%200.877197%205.62501C0.877197%2012.3621%2010.2373%2017.6813%2010.6357%2017.9044C10.7477%2017.9671%2010.8739%2018%2011.0022%2018C11.1305%2018%2011.2567%2017.9671%2011.3687%2017.9044C13.0902%2016.8961%2014.7059%2015.7173%2016.1914%2014.3856C19.4665%2011.438%2021.1272%208.49047%2021.1272%205.62501C21.1255%204.13368%2020.5323%202.70393%2019.4778%201.6494C18.4233%200.594873%2016.9935%200.00169855%2015.5022%208.2786e-06Z'%20fill='%23DBE2E5'/%3e%3c/svg%3e"
+                                        alt="fav"></div>
+                                <a class="relative" href="/recipes/4" data-discover="true"><img
+                                        src="https://res.cloudinary.com/drhyczqfj/image/upload/v1746096851/food1_ae3fmx.png"
+                                        alt="Fresh Lime Roasted Salmon with Ginger Sauce"
+                                        class="hover:scale-[1.1] transition-all w-full h-full object-cover"></a>
+                            </figure>
+                            <div class="flex flex-col gap-4"><a
+                                    class="text-xl font-semibold hover:text-blue-500/70 transition" href="/recipes/4"
+                                    data-discover="true">Fresh Lime Roasted Salmon with Ginger Sauce</a></div>
+                        </div>
+                        <div class="flex ml-[-8px]">
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img
+                                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.75%201.5H14.25C14.4489%201.5%2014.6397%201.42098%2014.7803%201.28033C14.921%201.13968%2015%200.948912%2015%200.75C15%200.551088%2014.921%200.360322%2014.7803%200.21967C14.6397%200.0790176%2014.4489%200%2014.25%200L9.75%200C9.55109%200%209.36032%200.0790176%209.21967%200.21967C9.07902%200.360322%209%200.551088%209%200.75C9%200.948912%209.07902%201.13968%209.21967%201.28033C9.36032%201.42098%209.55109%201.5%209.75%201.5Z'%20fill='black'/%3e%3cpath%20d='M12%203C10.22%203%208.47991%203.52784%206.99987%204.51677C5.51983%205.50571%204.36628%206.91131%203.68509%208.55585C3.0039%2010.2004%202.82567%2012.01%203.17294%2013.7558C3.5202%2015.5016%204.37737%2017.1053%205.63604%2018.364C6.89472%2019.6226%208.49836%2020.4798%2010.2442%2020.8271C11.99%2021.1743%2013.7996%2020.9961%2015.4442%2020.3149C17.0887%2019.6337%2018.4943%2018.4802%2019.4832%2017.0001C20.4722%2015.5201%2021%2013.78%2021%2012C20.9973%209.61388%2020.0482%207.32626%2018.361%205.63902C16.6737%203.95178%2014.3861%203.0027%2012%203V3ZM16.2426%208.81799L12.5304%2012.5303C12.4607%2012.6%2012.378%2012.6552%2012.2871%2012.6929C12.1961%2012.7306%2012.0985%2012.75%2012%2012.75C11.9015%2012.75%2011.804%2012.7306%2011.713%2012.6929C11.622%2012.6552%2011.5393%2012.6%2011.4697%2012.5304C11.4%2012.4607%2011.3448%2012.378%2011.3071%2012.287C11.2694%2012.1961%2011.25%2012.0985%2011.25%2012C11.25%2011.9015%2011.2694%2011.804%2011.3071%2011.713C11.3448%2011.622%2011.4%2011.5393%2011.4696%2011.4697L15.182%207.75735C15.2516%207.68771%2015.3343%207.63246%2015.4253%207.59477C15.5163%207.55708%2015.6138%207.53767%2015.7123%207.53767C15.8108%207.53767%2015.9083%207.55707%2015.9993%207.59476C16.0903%207.63244%2016.173%207.68769%2016.2426%207.75733C16.3123%207.82697%2016.3675%207.90965%2016.4052%208.00064C16.4429%208.09164%2016.4623%208.18916%2016.4623%208.28766C16.4623%208.38615%2016.4429%208.48368%2016.4052%208.57467C16.3675%208.66567%2016.3123%208.74835%2016.2427%208.81799H16.2426Z'%20fill='black'/%3e%3c/svg%3e"
+                                        alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">25
+                                    minutes</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img src="/assets/ForkKnife-CNi1BqRK.svg" alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">
+                                    Seafood</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col justify-between gap-4 rounded-2xl p-3 w-full h-full max-w-80 max-h-96 cursor-pointer undefined aos-init aos-animate"
+                         data-aos="fade-down" style="background: linear-gradient(white, rgb(231, 250, 254));">
+                        <div class="flex flex-col gap-4 ">
+                            <figure class="relative overflow-hidden rounded-2xl max w-full md:h-36 max-h-48 xl:h-48">
+                                <div class="absolute top-4 right-4 p-2.5 rounded-full bg-white z-10"><img
+                                        src="data:image/svg+xml,%3csvg%20width='22'%20height='18'%20viewBox='0%200%2022%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.5022%208.2786e-06C14.6291%20-0.00149138%2013.7677%200.200775%2012.9865%200.590718C12.2052%200.980661%2011.5258%201.54752%2011.0022%202.24621C10.293%201.30266%209.30512%200.606001%208.17823%200.254824C7.05134%20-0.0963541%205.84256%20-0.0842713%204.72291%200.289363C3.60327%200.662997%202.62948%201.37926%201.93932%202.3368C1.24916%203.29434%200.877596%204.44467%200.877197%205.62501C0.877197%2012.3621%2010.2373%2017.6813%2010.6357%2017.9044C10.7477%2017.9671%2010.8739%2018%2011.0022%2018C11.1305%2018%2011.2567%2017.9671%2011.3687%2017.9044C13.0902%2016.8961%2014.7059%2015.7173%2016.1914%2014.3856C19.4665%2011.438%2021.1272%208.49047%2021.1272%205.62501C21.1255%204.13368%2020.5323%202.70393%2019.4778%201.6494C18.4233%200.594873%2016.9935%200.00169855%2015.5022%208.2786e-06Z'%20fill='%23FF6363'/%3e%3c/svg%3e"
+                                        alt="fav"></div>
+                                <a class="relative" href="/recipes/5" data-discover="true"><img
+                                        src="https://res.cloudinary.com/drhyczqfj/image/upload/v1746096857/food2_tgw6vw.png"
+                                        alt="Strawberry Oatmeal Pancake with Honey Syrup"
+                                        class="hover:scale-[1.1] transition-all w-full h-full object-cover"></a>
+                            </figure>
+                            <div class="flex flex-col gap-4"><a
+                                    class="text-xl font-semibold hover:text-blue-500/70 transition" href="/recipes/5"
+                                    data-discover="true">Strawberry Oatmeal Pancake with Honey Syrup</a></div>
+                        </div>
+                        <div class="flex ml-[-8px]">
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img
+                                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.75%201.5H14.25C14.4489%201.5%2014.6397%201.42098%2014.7803%201.28033C14.921%201.13968%2015%200.948912%2015%200.75C15%200.551088%2014.921%200.360322%2014.7803%200.21967C14.6397%200.0790176%2014.4489%200%2014.25%200L9.75%200C9.55109%200%209.36032%200.0790176%209.21967%200.21967C9.07902%200.360322%209%200.551088%209%200.75C9%200.948912%209.07902%201.13968%209.21967%201.28033C9.36032%201.42098%209.55109%201.5%209.75%201.5Z'%20fill='black'/%3e%3cpath%20d='M12%203C10.22%203%208.47991%203.52784%206.99987%204.51677C5.51983%205.50571%204.36628%206.91131%203.68509%208.55585C3.0039%2010.2004%202.82567%2012.01%203.17294%2013.7558C3.5202%2015.5016%204.37737%2017.1053%205.63604%2018.364C6.89472%2019.6226%208.49836%2020.4798%2010.2442%2020.8271C11.99%2021.1743%2013.7996%2020.9961%2015.4442%2020.3149C17.0887%2019.6337%2018.4943%2018.4802%2019.4832%2017.0001C20.4722%2015.5201%2021%2013.78%2021%2012C20.9973%209.61388%2020.0482%207.32626%2018.361%205.63902C16.6737%203.95178%2014.3861%203.0027%2012%203V3ZM16.2426%208.81799L12.5304%2012.5303C12.4607%2012.6%2012.378%2012.6552%2012.2871%2012.6929C12.1961%2012.7306%2012.0985%2012.75%2012%2012.75C11.9015%2012.75%2011.804%2012.7306%2011.713%2012.6929C11.622%2012.6552%2011.5393%2012.6%2011.4697%2012.5304C11.4%2012.4607%2011.3448%2012.378%2011.3071%2012.287C11.2694%2012.1961%2011.25%2012.0985%2011.25%2012C11.25%2011.9015%2011.2694%2011.804%2011.3071%2011.713C11.3448%2011.622%2011.4%2011.5393%2011.4696%2011.4697L15.182%207.75735C15.2516%207.68771%2015.3343%207.63246%2015.4253%207.59477C15.5163%207.55708%2015.6138%207.53767%2015.7123%207.53767C15.8108%207.53767%2015.9083%207.55707%2015.9993%207.59476C16.0903%207.63244%2016.173%207.68769%2016.2426%207.75733C16.3123%207.82697%2016.3675%207.90965%2016.4052%208.00064C16.4429%208.09164%2016.4623%208.18916%2016.4623%208.28766C16.4623%208.38615%2016.4429%208.48368%2016.4052%208.57467C16.3675%208.66567%2016.3123%208.74835%2016.2427%208.81799H16.2426Z'%20fill='black'/%3e%3c/svg%3e"
+                                        alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">20
+                                    minutes</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img src="/assets/ForkKnife-CNi1BqRK.svg" alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">
+                                    Breakfast</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col justify-between gap-4 rounded-2xl p-3 w-full h-full max-w-80 max-h-96 cursor-pointer undefined aos-init aos-animate"
+                         data-aos="fade-up" style="background: linear-gradient(white, rgb(231, 250, 254));">
+                        <div class="flex flex-col gap-4 ">
+                            <figure class="relative overflow-hidden rounded-2xl max w-full md:h-36 max-h-48 xl:h-48">
+                                <div class="absolute top-4 right-4 p-2.5 rounded-full bg-white z-10"><img
+                                        src="data:image/svg+xml,%3csvg%20width='22'%20height='18'%20viewBox='0%200%2022%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.5022%208.2786e-06C14.6291%20-0.00149138%2013.7677%200.200775%2012.9865%200.590718C12.2052%200.980661%2011.5258%201.54752%2011.0022%202.24621C10.293%201.30266%209.30512%200.606001%208.17823%200.254824C7.05134%20-0.0963541%205.84256%20-0.0842713%204.72291%200.289363C3.60327%200.662997%202.62948%201.37926%201.93932%202.3368C1.24916%203.29434%200.877596%204.44467%200.877197%205.62501C0.877197%2012.3621%2010.2373%2017.6813%2010.6357%2017.9044C10.7477%2017.9671%2010.8739%2018%2011.0022%2018C11.1305%2018%2011.2567%2017.9671%2011.3687%2017.9044C13.0902%2016.8961%2014.7059%2015.7173%2016.1914%2014.3856C19.4665%2011.438%2021.1272%208.49047%2021.1272%205.62501C21.1255%204.13368%2020.5323%202.70393%2019.4778%201.6494C18.4233%200.594873%2016.9935%200.00169855%2015.5022%208.2786e-06Z'%20fill='%23DBE2E5'/%3e%3c/svg%3e"
+                                        alt="fav"></div>
+                                <a class="relative" href="/recipes/6" data-discover="true"><img
+                                        src="https://res.cloudinary.com/drhyczqfj/image/upload/v1746096862/food6_stbdey.png"
+                                        alt="Chicken Meatballs with Cream Cheese"
+                                        class="hover:scale-[1.1] transition-all w-full h-full object-cover"></a>
+                            </figure>
+                            <div class="flex flex-col gap-4"><a
+                                    class="text-xl font-semibold hover:text-blue-500/70 transition" href="/recipes/6"
+                                    data-discover="true">Chicken Meatballs with Cream Cheese</a></div>
+                        </div>
+                        <div class="flex ml-[-8px]">
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img
+                                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.75%201.5H14.25C14.4489%201.5%2014.6397%201.42098%2014.7803%201.28033C14.921%201.13968%2015%200.948912%2015%200.75C15%200.551088%2014.921%200.360322%2014.7803%200.21967C14.6397%200.0790176%2014.4489%200%2014.25%200L9.75%200C9.55109%200%209.36032%200.0790176%209.21967%200.21967C9.07902%200.360322%209%200.551088%209%200.75C9%200.948912%209.07902%201.13968%209.21967%201.28033C9.36032%201.42098%209.55109%201.5%209.75%201.5Z'%20fill='black'/%3e%3cpath%20d='M12%203C10.22%203%208.47991%203.52784%206.99987%204.51677C5.51983%205.50571%204.36628%206.91131%203.68509%208.55585C3.0039%2010.2004%202.82567%2012.01%203.17294%2013.7558C3.5202%2015.5016%204.37737%2017.1053%205.63604%2018.364C6.89472%2019.6226%208.49836%2020.4798%2010.2442%2020.8271C11.99%2021.1743%2013.7996%2020.9961%2015.4442%2020.3149C17.0887%2019.6337%2018.4943%2018.4802%2019.4832%2017.0001C20.4722%2015.5201%2021%2013.78%2021%2012C20.9973%209.61388%2020.0482%207.32626%2018.361%205.63902C16.6737%203.95178%2014.3861%203.0027%2012%203V3ZM16.2426%208.81799L12.5304%2012.5303C12.4607%2012.6%2012.378%2012.6552%2012.2871%2012.6929C12.1961%2012.7306%2012.0985%2012.75%2012%2012.75C11.9015%2012.75%2011.804%2012.7306%2011.713%2012.6929C11.622%2012.6552%2011.5393%2012.6%2011.4697%2012.5304C11.4%2012.4607%2011.3448%2012.378%2011.3071%2012.287C11.2694%2012.1961%2011.25%2012.0985%2011.25%2012C11.25%2011.9015%2011.2694%2011.804%2011.3071%2011.713C11.3448%2011.622%2011.4%2011.5393%2011.4696%2011.4697L15.182%207.75735C15.2516%207.68771%2015.3343%207.63246%2015.4253%207.59477C15.5163%207.55708%2015.6138%207.53767%2015.7123%207.53767C15.8108%207.53767%2015.9083%207.55707%2015.9993%207.59476C16.0903%207.63244%2016.173%207.68769%2016.2426%207.75733C16.3123%207.82697%2016.3675%207.90965%2016.4052%208.00064C16.4429%208.09164%2016.4623%208.18916%2016.4623%208.28766C16.4623%208.38615%2016.4429%208.48368%2016.4052%208.57467C16.3675%208.66567%2016.3123%208.74835%2016.2427%208.81799H16.2426Z'%20fill='black'/%3e%3c/svg%3e"
+                                        alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">35
+                                    minutes</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img src="/assets/ForkKnife-CNi1BqRK.svg" alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">
+                                    Appetizer</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col justify-between gap-4 rounded-2xl p-3 w-full h-full max-w-80 max-h-96 cursor-pointer undefined aos-init aos-animate"
+                         data-aos="fade-down" style="background: linear-gradient(white, rgb(231, 250, 254));">
+                        <div class="flex flex-col gap-4 ">
+                            <figure class="relative overflow-hidden rounded-2xl max w-full md:h-36 max-h-48 xl:h-48">
+                                <div class="absolute top-4 right-4 p-2.5 rounded-full bg-white z-10"><img
+                                        src="data:image/svg+xml,%3csvg%20width='22'%20height='18'%20viewBox='0%200%2022%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.5022%208.2786e-06C14.6291%20-0.00149138%2013.7677%200.200775%2012.9865%200.590718C12.2052%200.980661%2011.5258%201.54752%2011.0022%202.24621C10.293%201.30266%209.30512%200.606001%208.17823%200.254824C7.05134%20-0.0963541%205.84256%20-0.0842713%204.72291%200.289363C3.60327%200.662997%202.62948%201.37926%201.93932%202.3368C1.24916%203.29434%200.877596%204.44467%200.877197%205.62501C0.877197%2012.3621%2010.2373%2017.6813%2010.6357%2017.9044C10.7477%2017.9671%2010.8739%2018%2011.0022%2018C11.1305%2018%2011.2567%2017.9671%2011.3687%2017.9044C13.0902%2016.8961%2014.7059%2015.7173%2016.1914%2014.3856C19.4665%2011.438%2021.1272%208.49047%2021.1272%205.62501C21.1255%204.13368%2020.5323%202.70393%2019.4778%201.6494C18.4233%200.594873%2016.9935%200.00169855%2015.5022%208.2786e-06Z'%20fill='%23FF6363'/%3e%3c/svg%3e"
+                                        alt="fav"></div>
+                                <a class="relative" href="/recipes/7" data-discover="true"><img
+                                        src="https://res.cloudinary.com/drhyczqfj/image/upload/v1746096859/food4_vapd8p.png"
+                                        alt="Fresh and Healthy Mixed Mayonnaise Salad"
+                                        class="hover:scale-[1.1] transition-all w-full h-full object-cover"></a>
+                            </figure>
+                            <div class="flex flex-col gap-4"><a
+                                    class="text-xl font-semibold hover:text-blue-500/70 transition" href="/recipes/7"
+                                    data-discover="true">Fresh and Healthy Mixed Mayonnaise Salad</a></div>
+                        </div>
+                        <div class="flex ml-[-8px]">
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img
+                                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.75%201.5H14.25C14.4489%201.5%2014.6397%201.42098%2014.7803%201.28033C14.921%201.13968%2015%200.948912%2015%200.75C15%200.551088%2014.921%200.360322%2014.7803%200.21967C14.6397%200.0790176%2014.4489%200%2014.25%200L9.75%200C9.55109%200%209.36032%200.0790176%209.21967%200.21967C9.07902%200.360322%209%200.551088%209%200.75C9%200.948912%209.07902%201.13968%209.21967%201.28033C9.36032%201.42098%209.55109%201.5%209.75%201.5Z'%20fill='black'/%3e%3cpath%20d='M12%203C10.22%203%208.47991%203.52784%206.99987%204.51677C5.51983%205.50571%204.36628%206.91131%203.68509%208.55585C3.0039%2010.2004%202.82567%2012.01%203.17294%2013.7558C3.5202%2015.5016%204.37737%2017.1053%205.63604%2018.364C6.89472%2019.6226%208.49836%2020.4798%2010.2442%2020.8271C11.99%2021.1743%2013.7996%2020.9961%2015.4442%2020.3149C17.0887%2019.6337%2018.4943%2018.4802%2019.4832%2017.0001C20.4722%2015.5201%2021%2013.78%2021%2012C20.9973%209.61388%2020.0482%207.32626%2018.361%205.63902C16.6737%203.95178%2014.3861%203.0027%2012%203V3ZM16.2426%208.81799L12.5304%2012.5303C12.4607%2012.6%2012.378%2012.6552%2012.2871%2012.6929C12.1961%2012.7306%2012.0985%2012.75%2012%2012.75C11.9015%2012.75%2011.804%2012.7306%2011.713%2012.6929C11.622%2012.6552%2011.5393%2012.6%2011.4697%2012.5304C11.4%2012.4607%2011.3448%2012.378%2011.3071%2012.287C11.2694%2012.1961%2011.25%2012.0985%2011.25%2012C11.25%2011.9015%2011.2694%2011.804%2011.3071%2011.713C11.3448%2011.622%2011.4%2011.5393%2011.4696%2011.4697L15.182%207.75735C15.2516%207.68771%2015.3343%207.63246%2015.4253%207.59477C15.5163%207.55708%2015.6138%207.53767%2015.7123%207.53767C15.8108%207.53767%2015.9083%207.55707%2015.9993%207.59476C16.0903%207.63244%2016.173%207.68769%2016.2426%207.75733C16.3123%207.82697%2016.3675%207.90965%2016.4052%208.00064C16.4429%208.09164%2016.4623%208.18916%2016.4623%208.28766C16.4623%208.38615%2016.4429%208.48368%2016.4052%208.57467C16.3675%208.66567%2016.3123%208.74835%2016.2427%208.81799H16.2426Z'%20fill='black'/%3e%3c/svg%3e"
+                                        alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">15
+                                    minutes</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img src="/assets/ForkKnife-CNi1BqRK.svg" alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">
+                                    Salad</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col justify-between gap-4 rounded-2xl p-3 w-full h-full max-w-80 max-h-96 cursor-pointer undefined aos-init aos-animate"
+                         data-aos="fade-up" style="background: linear-gradient(white, rgb(231, 250, 254));">
+                        <div class="flex flex-col gap-4 ">
+                            <figure class="relative overflow-hidden rounded-2xl max w-full md:h-36 max-h-48 xl:h-48">
+                                <div class="absolute top-4 right-4 p-2.5 rounded-full bg-white z-10"><img
+                                        src="data:image/svg+xml,%3csvg%20width='22'%20height='18'%20viewBox='0%200%2022%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.5022%208.2786e-06C14.6291%20-0.00149138%2013.7677%200.200775%2012.9865%200.590718C12.2052%200.980661%2011.5258%201.54752%2011.0022%202.24621C10.293%201.30266%209.30512%200.606001%208.17823%200.254824C7.05134%20-0.0963541%205.84256%20-0.0842713%204.72291%200.289363C3.60327%200.662997%202.62948%201.37926%201.93932%202.3368C1.24916%203.29434%200.877596%204.44467%200.877197%205.62501C0.877197%2012.3621%2010.2373%2017.6813%2010.6357%2017.9044C10.7477%2017.9671%2010.8739%2018%2011.0022%2018C11.1305%2018%2011.2567%2017.9671%2011.3687%2017.9044C13.0902%2016.8961%2014.7059%2015.7173%2016.1914%2014.3856C19.4665%2011.438%2021.1272%208.49047%2021.1272%205.62501C21.1255%204.13368%2020.5323%202.70393%2019.4778%201.6494C18.4233%200.594873%2016.9935%200.00169855%2015.5022%208.2786e-06Z'%20fill='%23DBE2E5'/%3e%3c/svg%3e"
+                                        alt="fav"></div>
+                                <a class="relative" href="/recipes/8" data-discover="true"><img
+                                        src="https://res.cloudinary.com/drhyczqfj/image/upload/v1746096875/food7_iqjgbf.png"
+                                        alt="Fruity Pancake with Orange &amp; Blueberry"
+                                        class="hover:scale-[1.1] transition-all w-full h-full object-cover"></a>
+                            </figure>
+                            <div class="flex flex-col gap-4"><a
+                                    class="text-xl font-semibold hover:text-blue-500/70 transition" href="/recipes/8"
+                                    data-discover="true">Fruity Pancake with Orange &amp; Blueberry</a></div>
+                        </div>
+                        <div class="flex ml-[-8px]">
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img
+                                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.75%201.5H14.25C14.4489%201.5%2014.6397%201.42098%2014.7803%201.28033C14.921%201.13968%2015%200.948912%2015%200.75C15%200.551088%2014.921%200.360322%2014.7803%200.21967C14.6397%200.0790176%2014.4489%200%2014.25%200L9.75%200C9.55109%200%209.36032%200.0790176%209.21967%200.21967C9.07902%200.360322%209%200.551088%209%200.75C9%200.948912%209.07902%201.13968%209.21967%201.28033C9.36032%201.42098%209.55109%201.5%209.75%201.5Z'%20fill='black'/%3e%3cpath%20d='M12%203C10.22%203%208.47991%203.52784%206.99987%204.51677C5.51983%205.50571%204.36628%206.91131%203.68509%208.55585C3.0039%2010.2004%202.82567%2012.01%203.17294%2013.7558C3.5202%2015.5016%204.37737%2017.1053%205.63604%2018.364C6.89472%2019.6226%208.49836%2020.4798%2010.2442%2020.8271C11.99%2021.1743%2013.7996%2020.9961%2015.4442%2020.3149C17.0887%2019.6337%2018.4943%2018.4802%2019.4832%2017.0001C20.4722%2015.5201%2021%2013.78%2021%2012C20.9973%209.61388%2020.0482%207.32626%2018.361%205.63902C16.6737%203.95178%2014.3861%203.0027%2012%203V3ZM16.2426%208.81799L12.5304%2012.5303C12.4607%2012.6%2012.378%2012.6552%2012.2871%2012.6929C12.1961%2012.7306%2012.0985%2012.75%2012%2012.75C11.9015%2012.75%2011.804%2012.7306%2011.713%2012.6929C11.622%2012.6552%2011.5393%2012.6%2011.4697%2012.5304C11.4%2012.4607%2011.3448%2012.378%2011.3071%2012.287C11.2694%2012.1961%2011.25%2012.0985%2011.25%2012C11.25%2011.9015%2011.2694%2011.804%2011.3071%2011.713C11.3448%2011.622%2011.4%2011.5393%2011.4696%2011.4697L15.182%207.75735C15.2516%207.68771%2015.3343%207.63246%2015.4253%207.59477C15.5163%207.55708%2015.6138%207.53767%2015.7123%207.53767C15.8108%207.53767%2015.9083%207.55707%2015.9993%207.59476C16.0903%207.63244%2016.173%207.68769%2016.2426%207.75733C16.3123%207.82697%2016.3675%207.90965%2016.4052%208.00064C16.4429%208.09164%2016.4623%208.18916%2016.4623%208.28766C16.4623%208.38615%2016.4429%208.48368%2016.4052%208.57467C16.3675%208.66567%2016.3123%208.74835%2016.2427%208.81799H16.2426Z'%20fill='black'/%3e%3c/svg%3e"
+                                        alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">25
+                                    minutes</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 rounded-full sm:py-2 sm:px-3 py-1 px-2.5 w-fit undefined">
+                                <span><img src="/assets/ForkKnife-CNi1BqRK.svg" alt=""></span>
+                                <div class="flex flex-col"><p class="text-gray-600 text-xs sm:text-sm font-undefined">
+                                    Breakfast</p>
+                                    <p class="text-xs sm:text-sm font-normal undefined"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-5 sm:px-6 w-full undefined">
+                <div class="flex flex-1 justify-between sm:hidden">
+                    <button disabled=""
+                            class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50 aos-init aos-animate"
+                            data-aos="fade-right" data-aos-delay="100">Previous
+                    </button>
+                    <button class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50 aos-init aos-animate"
+                            data-aos="fade-left" data-aos-delay="100">Next
+                    </button>
+                </div>
+                <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                    <div><p class="text-sm text-gray-700 aos-init aos-animate" data-aos="fade-right"
+                            data-aos-delay="100">Page <span class="font-medium">1</span> of <span
+                            class="font-medium">3</span></p></div>
+                    <div>
+                        <nav aria-label="Pagination"
+                             class="isolate inline-flex -space-x-px rounded-md shadow-xs aos-init aos-animate"
+                             data-aos="fade-left" data-aos-delay="100">
+                            <button disabled=""
+                                    class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50">
+                                <span class="sr-only">Previous</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     aria-hidden="true" data-slot="icon" class="size-5">
+                                    <path fill-rule="evenodd"
+                                          d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <button class="relative inline-flex items-center px-4 py-2 text-sm font-semibold z-10 bg-indigo-600 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                1
+                            </button>
+                            <button class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                                2
+                            </button>
+                            <button class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                                3
+                            </button>
+                            <button class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50">
+                                <span class="sr-only">Next</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     aria-hidden="true" data-slot="icon" class="size-5">
+                                    <path fill-rule="evenodd"
+                                          d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="mx-auto  max-w-[1440px] min-w-[280px] py-8 md:pt-8 px-8 md:px-12 lg:px-14">
+        <div class="flex flex-col md:flex-row justify-between items-center md:mx-12 mx-auto md:pb-6">
+            <div class="mx-auto md:mx-0 text-center md:text-left">
+                <img src="assets/Foodieland.png" alt="" class="w-32 md:w-40 mb-4 block mx-auto md:mx-0">
+                <p class="text-[#00000099]">Lorem ipsum dolor sit amet, consectetuipisicing elit, </p>
+            </div>
+            <div class="flex flex-row gap-8 mt-8 md:mt-0 ">
+
+
+                <a href="#" class=" font-semibold text-gray-900">Recipies</a>
+                <a href="#" class=" font-semibold text-gray-900">Blog</a>
+                <a href="#" class=" font-semibold text-gray-900">Contact</a>
+                <a href="#" class=" font-semibold text-gray-900">About Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="border-b border-slate-300 mb-8"></div>
+    <div class="pb-2 md:pb-8">
+        <div
+                class="mx-auto  px-8 md:px-12 lg:px-14 pt-8 text-center flex flex-col md:flex-row justify-between items-center">
+            <div class="md:w-1/3 hidden "></div>
+            <p class="flex-1 text-[#00000099]">© 2023 Foodieland. All rights reserved.</p>
+            <div class=" flex items-center  gap-x-4">
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                        <path
+                                d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                        <path
+                                d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                        <path
+                                d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+    // Related recipes data
+
+    $(document).ready(function () {
+        // Open menu
+        $('button[aria-label="Open main menu"]').on('click', function () {
+            $('div[role="dialog"]').removeClass('hidden');
+        });
+
+        // Close menu
+        $('button[aria-label="Close menu"]').on('click', function () {
+            $('div[role="dialog"]').addClass('hidden');
+        });
+    });
+    // Toggle like functionality
+
+
+    // Add ingredient checkbox functionality
+    document.addEventListener('change', function (e) {
+        if (e.target.classList.contains('ingredient-checkbox')) {
+            const label = e.target.nextElementSibling;
+            if (e.target.checked) {
+                label.classList.add('line-through', 'text-gray-500');
+                label.classList.remove('text-gray-600');
+            } else {
+                label.classList.remove('line-through', 'text-gray-500');
+                label.classList.add('text-gray-600');
+            }
+        }
+    });
+</script>
+</body>
+</html>
