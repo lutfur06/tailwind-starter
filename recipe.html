@@ -578,6 +578,7 @@
     </div>
 
 </footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script>
         // Related recipes data
@@ -652,7 +653,17 @@
             // Re-initialize Lucide icons for the new content
             lucide.createIcons();
         }
+        $(document).ready(function () {
+            // Open menu
+            $('button[aria-label="Open main menu"]').on('click', function () {
+                $('div[role="dialog"]').removeClass('hidden');
+            });
 
+            // Close menu
+            $('button[aria-label="Close menu"]').on('click', function () {
+                $('div[role="dialog"]').addClass('hidden');
+            });
+        });
         // Toggle like functionality
         function toggleLike(index) {
             const heartBtn = document.querySelector(`[data-index="${index}"] i`);
