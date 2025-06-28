@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Foodieland</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    link slick and inter font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-['Inter']">
+<header class="bg-white">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 " aria-label="Global">
+        <div class="flex md:flex-1 md:mr-2">
+            <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Foodieland</span>
+                <img class="h-8 w-auto" src="assets/Foodieland.png" alt="" />
+            </a>
+        </div>
+        <div class="flex md:hidden">
+            <button type="button" aria-label="Open main menu"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Open main menu</span>
+                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden md:flex md:gap-x-12">
+
+            <a href="index.html" class=" font-semibold text-gray-900" aria-expanded="false">
+                Home
+            </a>
+            <a href="recipe.html" class=" font-semibold text-gray-900">Recipies</a>
+            <a href="blog.html" class=" font-semibold text-gray-900">Blog</a>
+            <a href="contact.html" class=" font-semibold text-gray-900">Contact</a>
+            <a href="about.html" class=" font-semibold text-gray-900">About Us</a>
+        </div>
+        <div class="hidden md:flex md:flex-1 md:justify-end gap-x-4">
+            <a href="#" class="text-sm/6 font-semibold text-gray-900"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                           x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                <path
+                        d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z">
+                </path>
+            </svg></a>
+            <a href="#" class="text-sm/6 font-semibold text-gray-900"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                           x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                <path
+                        d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z">
+                </path>
+            </svg></a>
+            <a href="#" class="text-sm/6 font-semibold text-gray-900"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                           x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                <path
+                        d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                </path>
+            </svg></a>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="md:hidden hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-5 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between ">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img class="h-8 w-auto" src="assets/Foodieland.png" alt="" />
+                </a>
+                <button type="button" aria-label="Close menu" class="-ml-3 rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-8 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+
+                    <a href="index.html"
+                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
+                    <a href="recipe.html"
+                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Recipies</a>
+                    <a href="blog.html"
+                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a>
+                    <a href="contact.html"
+                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact</a>
+                    <a href="about.html"
+                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">About
+                        Us</a>
+                </div>
+                <div class="py-6 flex items-center  gap-x-4">
+                    <a href="#"
+                       class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"><svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                        <path
+                                d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z">
+                        </path>
+                    </svg></a>
+                    <a href="#"
+                       class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"><svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                        <path
+                                d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z">
+                        </path>
+                    </svg></a>
+                    <a href="#"
+                       class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"><svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                        <path
+                                d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                        </path>
+                    </svg></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="border-b border-slate-300"></div>
+
+    <!-- Recipe Hero Section -->
+    <section class="w-full px-4 py-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row">
+                <!-- Left Content - Recipe Info -->
+                <div class="w-full lg:w-2/3 p-4">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Health Japanese Fried Rice</h2>
+                    <div class="md:hidden w-full justify-center flex items-center mx-auto md:mx-0 border-r-0 lg:border-r border-gray-300 pr-0 lg:pr-4">
+                        <img src="assets/video.png" alt="John Smith" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-bold text-gray-900 mb-0 text-sm">John Smith</p>
+                            <p class="text-xs text-gray-600 mb-0">15 March 2022</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3  md:grid-cols-4 gap-2 md:gap-4 mt-4 md:mt-0">
+                        <!-- Author -->
+                        <div class="hidden  md:flex items-center mx-auto md:mx-0 border-r-0 lg:border-r border-gray-300 pr-0 lg:pr-4">
+                            <img src="assets/video.png" alt="John Smith" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="font-bold text-gray-900 mb-0 text-sm">John Smith</p>
+                                <p class="text-xs text-gray-600 mb-0">15 March 2022</p>
+                            </div>
+                        </div>
+
+                        <!-- Prep Time -->
+                        <div class="flex items-center border-r-0 lg:border-r border-gray-300 pr-0 lg:pr-4 gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none">
+                                <path d="M9.75 1.5H14.25C14.4489 1.5 14.6397 1.42098 14.7803 1.28033C14.921 1.13968 15 0.948912 15 0.75C15 0.551088 14.921 0.360322 14.7803 0.21967C14.6397 0.0790176 14.4489 0 14.25 0L9.75 0C9.55109 0 9.36032 0.0790176 9.21967 0.21967C9.07902 0.360322 9 0.551088 9 0.75C9 0.948912 9.07902 1.13968 9.21967 1.28033C9.36032 1.42098 9.55109 1.5 9.75 1.5Z" fill="black"/>
+                                <path d="M12 3C10.22 3 8.47991 3.52784 6.99987 4.51677C5.51983 5.50571 4.36628 6.91131 3.68509 8.55585C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5016 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.78 21 12C20.9973 9.61388 20.0482 7.32626 18.361 5.63902C16.6737 3.95178 14.3861 3.0027 12 3ZM16.2426 8.81799L12.5304 12.5303C12.4607 12.6 12.378 12.6552 12.2871 12.6929C12.1961 12.7306 12.0985 12.75 12 12.75C11.9015 12.75 11.804 12.7306 11.713 12.6929C11.622 12.6553 11.5393 12.6 11.4697 12.5304C11.4 12.4607 11.3448 12.378 11.3071 12.2871C11.2694 12.1961 11.25 12.0985 11.25 12C11.25 11.9015 11.2694 11.804 11.3071 11.713C11.3448 11.622 11.4 11.5393 11.4696 11.4697L15.182 7.75736C15.2516 7.68771 15.3343 7.63246 15.4253 7.59477C15.5163 7.55708 15.6138 7.53767 15.7123 7.53767C15.8108 7.53767 15.9083 7.55707 15.9993 7.59476C16.0903 7.63244 16.173 7.68769 16.2426 7.75733C16.3123 7.82697 16.3675 7.90965 16.4052 8.00065C16.4429 8.09164 16.4623 8.18916 16.4623 8.28766C16.4623 8.38615 16.4429 8.48368 16.4052 8.57467C16.3675 8.66567 16.3123 8.74835 16.2427 8.81799H16.2426Z" fill="black"/>
+                            </svg>
+                            <div>
+                                <p class="text-gray-900  mb-0 text-xs font-semibold">PREP TIME</p>
+                                <p class="text-xs text-gray-600 mb-0">15 Minutes</p>
+                            </div>
+                        </div>
+
+                        <!-- Cook Time -->
+                        <div class="flex items-center border-r-0 lg:border-r border-gray-300 pr-0 lg:pr-4 gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none">
+                                <path d="M9.75 1.5H14.25C14.4489 1.5 14.6397 1.42098 14.7803 1.28033C14.921 1.13968 15 0.948912 15 0.75C15 0.551088 14.921 0.360322 14.7803 0.21967C14.6397 0.0790176 14.4489 0 14.25 0L9.75 0C9.55109 0 9.36032 0.0790176 9.21967 0.21967C9.07902 0.360322 9 0.551088 9 0.75C9 0.948912 9.07902 1.13968 9.21967 1.28033C9.36032 1.42098 9.55109 1.5 9.75 1.5Z" fill="black"/>
+                                <path d="M12 3C10.22 3 8.47991 3.52784 6.99987 4.51677C5.51983 5.50571 4.36628 6.91131 3.68509 8.55585C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5016 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.78 21 12C20.9973 9.61388 20.0482 7.32626 18.361 5.63902C16.6737 3.95178 14.3861 3.0027 12 3ZM16.2426 8.81799L12.5304 12.5303C12.4607 12.6 12.378 12.6552 12.2871 12.6929C12.1961 12.7306 12.0985 12.75 12 12.75C11.9015 12.75 11.804 12.7306 11.713 12.6929C11.622 12.6553 11.5393 12.6 11.4697 12.5304C11.4 12.4607 11.3448 12.378 11.3071 12.2871C11.2694 12.1961 11.25 12.0985 11.25 12C11.25 11.9015 11.2694 11.804 11.3071 11.713C11.3448 11.622 11.4 11.5393 11.4696 11.4697L15.182 7.75736C15.2516 7.68771 15.3343 7.63246 15.4253 7.59477C15.5163 7.55708 15.6138 7.53767 15.7123 7.53767C15.8108 7.53767 15.9083 7.55707 15.9993 7.59476C16.0903 7.63244 16.173 7.68769 16.2426 7.75733C16.3123 7.82697 16.3675 7.90965 16.4052 8.00065C16.4429 8.09164 16.4623 8.18916 16.4623 8.28766C16.4623 8.38615 16.4429 8.48368 16.4052 8.57467C16.3675 8.66567 16.3123 8.74835 16.2427 8.81799H16.2426Z" fill="black"/>
+                            </svg>
+                            <div>
+                                <p class="text-gray-900 mb-0 text-xs font-semibold">COOK TIME</p>
+                                <p class="text-xs text-gray-600 mb-0">15 Minutes</p>
+                            </div>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none">
+                                <path d="M11.9989 7.47893C11.9985 7.46538 11.998 7.45183 11.9969 7.43819C11.9957 7.42451 11.994 7.41101 11.9922 7.39754C11.9912 7.39059 11.9909 7.38367 11.9898 7.37667L11.2398 2.87667C11.2237 2.77947 11.1885 2.6864 11.1364 2.60278C11.0843 2.51916 11.0162 2.44663 10.936 2.38934C10.8559 2.33205 10.7652 2.29111 10.6692 2.26887C10.5732 2.24663 10.4738 2.24352 10.3766 2.25972C10.2794 2.27592 10.1864 2.31112 10.1028 2.36329C10.0192 2.41547 9.9467 2.4836 9.88946 2.5638C9.83222 2.644 9.79134 2.73469 9.76916 2.8307C9.74699 2.9267 9.74394 3.02613 9.76021 3.12331L10.3646 6.74999H8.625V2.99999C8.625 2.80108 8.54598 2.61031 8.40533 2.46966C8.26468 2.32901 8.07391 2.24999 7.875 2.24999C7.67609 2.24999 7.48532 2.32901 7.34467 2.46966C7.20402 2.61031 7.125 2.80108 7.125 2.99999V6.74999H5.38536L5.98979 3.12331C6.00606 3.02613 6.00301 2.9267 5.98083 2.8307C5.95866 2.73469 5.91778 2.644 5.86053 2.5638C5.80329 2.4836 5.73081 2.41547 5.64722 2.36329C5.56364 2.31112 5.47059 2.27592 5.3734 2.25972C5.27621 2.24352 5.17678 2.24663 5.08079 2.26887C4.9848 2.29111 4.89413 2.33205 4.81397 2.38934C4.73381 2.44663 4.66572 2.51916 4.6136 2.60278C4.56148 2.6864 4.52635 2.77947 4.51021 2.87667L3.76021 7.37667C3.75906 7.38367 3.75879 7.39059 3.75778 7.39754C3.75595 7.411 3.75426 7.42451 3.75311 7.43819C3.75197 7.45183 3.75146 7.46538 3.75105 7.47893C3.75087 7.48598 3.75 7.4929 3.75 7.49999C3.75 7.50667 3.75046 7.51322 3.7505 7.51986C3.75064 7.52448 3.75064 7.52906 3.75087 7.53364C3.75993 8.4912 4.1014 9.41586 4.71687 10.1495C5.33235 10.8831 6.18359 11.3801 7.125 11.5554V21C7.125 21.1989 7.20402 21.3897 7.34467 21.5303C7.48532 21.671 7.67609 21.75 7.875 21.75C8.07391 21.75 8.26468 21.671 8.40533 21.5303C8.54598 21.3897 8.625 21.1989 8.625 21V11.5554C9.56641 11.3801 10.4177 10.8831 11.0331 10.1495C11.6486 9.41586 11.9901 8.49119 11.9991 7.53364C11.9994 7.52906 11.9994 7.52448 11.9995 7.51986C11.9995 7.51322 12 7.50667 12 7.49999C12 7.4929 11.9991 7.48598 11.9989 7.47893Z" fill="black"/>
+                                <path d="M19.8743 2.98673C19.8741 2.97126 19.8732 2.95578 19.872 2.94026C19.8712 2.92973 19.8702 2.9193 19.8689 2.90891C19.8673 2.89595 19.8653 2.883 19.863 2.87004C19.8607 2.85699 19.8582 2.84409 19.8553 2.83131C19.8529 2.82115 19.8503 2.81104 19.8475 2.80092C19.8433 2.78586 19.8388 2.77103 19.8337 2.75638C19.8323 2.75217 19.8314 2.74791 19.8299 2.7437C19.8282 2.73917 19.826 2.73495 19.8243 2.73047C19.8186 2.71577 19.8125 2.70134 19.806 2.68716C19.8018 2.67791 19.7974 2.66879 19.7928 2.65979C19.7866 2.64771 19.7801 2.63582 19.7733 2.62413C19.7673 2.61365 19.7611 2.60335 19.7546 2.59323C19.7484 2.58371 19.742 2.57446 19.7354 2.56522C19.7274 2.55405 19.7194 2.54311 19.7109 2.53249C19.7046 2.52466 19.6981 2.51711 19.6916 2.50955C19.6823 2.49875 19.6727 2.48808 19.6628 2.47787C19.6558 2.47073 19.6486 2.46387 19.6414 2.457C19.6314 2.44748 19.6213 2.43814 19.6108 2.42921C19.6024 2.42203 19.5937 2.41525 19.5849 2.40843C19.5751 2.40083 19.5653 2.39328 19.5551 2.38614C19.5447 2.37886 19.534 2.37204 19.5233 2.36531C19.5142 2.35959 19.5051 2.35382 19.4957 2.34851C19.4835 2.34155 19.471 2.33514 19.4583 2.32887C19.4497 2.32457 19.4411 2.32027 19.4322 2.31628C19.419 2.31033 19.4055 2.30493 19.3918 2.29971C19.3827 2.29628 19.3737 2.29285 19.3644 2.28973C19.3513 2.28529 19.338 2.2814 19.3246 2.27769C19.3139 2.27472 19.3032 2.27193 19.2924 2.26941C19.2805 2.26671 19.2685 2.26437 19.2564 2.26222C19.2432 2.25984 19.2301 2.25783 19.2168 2.25618C19.2066 2.25494 19.1963 2.25394 19.186 2.25307C19.1706 2.25183 19.1552 2.25105 19.1397 2.25073C19.1347 2.25064 19.13 2.25 19.125 2.25C19.1205 2.25 19.1161 2.2506 19.1116 2.25069C19.0962 2.25096 19.0808 2.25179 19.0654 2.25302C19.0548 2.25385 19.0443 2.2548 19.0339 2.25609C19.0209 2.25769 19.008 2.2597 18.9951 2.26199C18.982 2.26428 18.9691 2.2668 18.9563 2.26978C18.9462 2.27211 18.9361 2.27476 18.9259 2.27756C18.9109 2.28168 18.8961 2.28621 18.8814 2.29129C18.8772 2.29271 18.8729 2.29362 18.8687 2.29513C18.8595 2.29852 18.8504 2.30255 18.8412 2.30598C18.8377 2.3074 18.8341 2.30864 18.8306 2.3101C16.8985 3.03625 15.3511 5.4066 14.2315 9.35806C13.7237 11.1814 13.3552 13.0408 13.1293 14.9201C13.1181 15.0247 13.1291 15.1305 13.1614 15.2306C13.1938 15.3308 13.2469 15.423 13.3172 15.5012C13.3875 15.5795 13.4735 15.6421 13.5696 15.685C13.6657 15.7278 13.7698 15.75 13.875 15.75H18.375V21C18.375 21.1989 18.454 21.3897 18.5947 21.5303C18.7353 21.671 18.9261 21.75 19.125 21.75C19.3239 21.75 19.5147 21.671 19.6554 21.5303C19.796 21.3897 19.875 21.1989 19.875 21V3C19.875 2.99551 19.8744 2.99121 19.8743 2.98673Z" fill="black"/>
+                            </svg>
+                            <div>
+                                <p class="text-gray-900 mb-0 text-xs font-medium">Chicken</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Print/Share Icons -->
+                <div class="w-full lg:w-1/3 flex justify-center items-center mt-6 lg:mt-0">
+                    <div class="flex space-x-8">
+                        <!-- Print -->
+                        <div class="flex flex-col items-center cursor-pointer hover:opacity-80">
+                            <div class="w-16 h-16 lg:w-18 lg:h-18 bg-gradient-to-br from-cyan-50 to-cyan-50 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5.99988 9V2H17.9999V9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5.99988 18H3.99988C3.46944 18 2.96074 17.7893 2.58566 17.4142C2.21059 17.0391 1.99988 16.5304 1.99988 16V11C1.99988 10.4696 2.21059 9.96086 2.58566 9.58579C2.96074 9.21071 3.46944 9 3.99988 9H19.9999C20.5303 9 21.039 9.21071 21.4141 9.58579C21.7892 9.96086 21.9999 10.4696 21.9999 11V16C21.9999 16.5304 21.7892 17.0391 21.4141 17.4142C21.039 17.7893 20.5303 18 19.9999 18H17.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M17.9999 14H5.99988V22H17.9999V14Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="mt-2 text-xs lg:text-sm font-medium">PRINT</div>
+                        </div>
+
+                        <!-- Share -->
+                        <div class="flex flex-col items-center cursor-pointer hover:opacity-80">
+                            <div class="w-16 h-16 lg:w-18 lg:h-18 bg-gradient-to-br from-cyan-50 to-cyan-50 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 12V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 6L12 2L8 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 2V15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="mt-2 text-xs lg:text-sm font-medium">SHARE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video + Nutrition Section -->
+    <section class="my-8 lg:my-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+                <!-- Video Column -->
+                <div class="w-full lg:w-2/3">
+                    <div class="relative rounded-2xl overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=800&h=400&fit=crop" alt="Video Thumbnail" class="w-full h-64 md:h-80 lg:h-96 object-cover">
+                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-3 lg:p-4 shadow-lg hover:shadow-xl transition-shadow">
+                            <i data-lucide="play" class="w-6 h-6 lg:w-8 lg:h-8 text-gray-900 ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Nutrition Info Column -->
+                <div class="w-full lg:w-1/3">
+                    <div class="bg-gradient-to-br from-cyan-50 to-cyan-50 rounded-2xl p-4 lg:p-6 h-full">
+                        <h4 class="text-lg lg:text-xl font-bold mb-4 lg:mb-6">Nutrition Information</h4>
+                        <div class="space-y-2 lg:space-y-3">
+                            <div class="flex justify-between border-b border-gray-200 pb-2">
+                                <span class="text-sm lg:text-base">Calories</span>
+                                <span class="font-medium text-sm lg:text-base">219.9 kcal</span>
+                            </div>
+                            <div class="flex justify-between border-b border-gray-200 pb-2">
+                                <span class="text-sm lg:text-base">Total Fat</span>
+                                <span class="font-medium text-sm lg:text-base">10.7 g</span>
+                            </div>
+                            <div class="flex justify-between border-b border-gray-200 pb-2">
+                                <span class="text-sm lg:text-base">Protein</span>
+                                <span class="font-medium text-sm lg:text-base">7.9 g</span>
+                            </div>
+                            <div class="flex justify-between border-b border-gray-200 pb-2">
+                                <span class="text-sm lg:text-base">Carbohydrate</span>
+                                <span class="font-medium text-sm lg:text-base">22.3 g</span>
+                            </div>
+                            <div class="flex justify-between pb-2">
+                                <span class="text-sm lg:text-base">Cholesterol</span>
+                                <span class="font-bold text-sm lg:text-base">37.4 mg</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 lg:mt-6">
+                            <p class="text-gray-600 text-sm lg:text-base">
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Description -->
+    <section class="w-full px-4 py-4">
+        <div class="max-w-6xl mx-auto p-4">
+            <p class="text-gray-600 text-base lg:text-lg leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content with Sidebar -->
+    <section class="w-full px-4 py-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-8 px-4 md:px-6 lg:px-8">
+                <!-- Main Content - Ingredients & Directions -->
+                <div class="w-full lg:w-2/3">
+                    <!-- Ingredients Section -->
+                    <div class="mb-8 lg:mb-12 px-2 md:px-4">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 lg:mb-8">Ingredients</h2>
+
+                        <!-- For main dish -->
+                        <div class="mb-6 lg:mb-8">
+                            <h3 class="text-lg lg:text-xl font-semibold text-gray-900 mb-3 lg:mb-4">For main dish</h3>
+                            <div class="space-y-3 lg:space-y-4">
+                                <div class="pl-4">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="ingredient1" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded ingredient-checkbox">
+                                        <label for="ingredient1" class="text-sm lg:text-base cursor-pointer text-gray-600">
+                                            Lorem ipsum dolor sit amet
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pl-4">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="ingredient2" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded ingredient-checkbox">
+                                        <label for="ingredient2" class="text-sm lg:text-base cursor-pointer text-gray-600">
+                                            Lorem ipsum dolor sit amet
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pl-4">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="ingredient3" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded ingredient-checkbox">
+                                        <label for="ingredient3" class="text-sm lg:text-base cursor-pointer text-gray-600">
+                                            Lorem ipsum dolor sit amet
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pl-4">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="ingredient4" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded ingredient-checkbox">
+                                        <label for="ingredient4" class="text-sm lg:text-base cursor-pointer text-gray-600">
+                                            Lorem ipsum dolor sit amet
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- For the sauce -->
+                        <div class="mb-6 lg:mb-8">
+                            <h3 class="text-lg lg:text-xl font-semibold text-gray-900 mb-3 lg:mb-4">For the sauce</h3>
+                            <div class="space-y-3 lg:space-y-4">
+                                <div class="pl-4">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="sauce1" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded ingredient-checkbox">
+                                        <label for="sauce1" class="text-sm lg:text-base cursor-pointer text-gray-600">
+                                            Lorem ipsum dolor sit amet
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pl-4">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="sauce2" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded ingredient-checkbox">
+                                        <label for="sauce2" class="text-sm lg:text-base cursor-pointer text-gray-600">
+                                            Lorem ipsum dolor sit amet
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pl-4">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="sauce3" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded ingredient-checkbox">
+                                        <label for="sauce3" class="text-sm lg:text-base cursor-pointer text-gray-600">
+                                            Lorem ipsum dolor sit amet
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Directions Section -->
+                    <div class="mb-8 lg:mb-12">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 lg:mb-8">Directions</h2>
+
+                        <div class="space-y-8 lg:space-y-12">
+                            <div class="flex">
+                                <div class="w-6 h-6 lg:w-7 lg:h-7 border-2 border-gray-400 text-gray-400 rounded-full flex items-center justify-center font-bold mr-3 lg:mr-4 flex-shrink-0 text-xs lg:text-sm">
+                                    
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-base lg:text-lg text-gray-900 mb-2">
+                                        1. Lorem ipsum dolor sit amet
+                                    </h4>
+                                    <p class="text-gray-600 leading-relaxed text-sm lg:text-base">
+                                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Cooking Image -->
+                            <div class="my-6 lg:my-8 mx-3 lg:mx-4">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=400&fit=crop" alt="Cooking process" class="w-full h-48 lg:h-64 object-cover rounded-lg">
+                            </div>
+
+                            <div class="flex">
+                                <div class="w-6 h-6 lg:w-7 lg:h-7 border-2 border-gray-400 text-gray-400 rounded-full flex items-center justify-center font-bold mr-3 lg:mr-4 flex-shrink-0 text-xs lg:text-sm">
+                                    
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-base lg:text-lg text-gray-900 mb-2">
+                                        2. Lorem ipsum dolor sit amet
+                                    </h4>
+                                    <p class="text-gray-600 leading-relaxed text-sm lg:text-base">
+                                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <div class="w-6 h-6 lg:w-7 lg:h-7 border-2 border-gray-400 text-gray-400 rounded-full flex items-center justify-center font-bold mr-3 lg:mr-4 flex-shrink-0 text-xs lg:text-sm">
+                                    
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-base lg:text-lg text-gray-900 mb-2">
+                                        3. Lorem ipsum dolor sit amet
+                                    </h4>
+                                    <p class="text-gray-600 leading-relaxed text-sm lg:text-base">
+                                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="w-full lg:w-1/3 px-2 md:px-4">
+                    <!-- Other Recipe -->
+                    <div class="mb-6 lg:mb-8">
+                        <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-4 lg:mb-6">Other Recipe</h3>
+                        <div class="space-y-3 lg:space-y-4">
+                            <div class="flex">
+                                <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=80&h=80&fit=crop" alt="Chicken Meatballs" class="w-14 h-14 lg:w-16 lg:h-16 object-cover rounded-lg mr-3 flex-shrink-0">
+                                <div class="flex-grow">
+                                    <h4 class="font-medium text-sm lg:text-base mb-1 leading-tight">
+                                        Chicken Meatballs with Cream Cheese
+                                    </h4>
+                                    <p class="text-gray-600 text-xs mb-0">By Andreas Paula</p>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=80&h=80&fit=crop" alt="Creamy Chicken" class="w-14 h-14 lg:w-16 lg:h-16 object-cover rounded-lg mr-3 flex-shrink-0">
+                                <div class="flex-grow">
+                                    <h4 class="font-medium text-sm lg:text-base mb-1 leading-tight">
+                                        The Creamiest Creamy Chicken an...
+                                    </h4>
+                                    <p class="text-gray-600 text-xs mb-0">By Andreas Paula</p>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=80&h=80&fit=crop" alt="Chicken and Rice" class="w-14 h-14 lg:w-16 lg:h-16 object-cover rounded-lg mr-3 flex-shrink-0">
+                                <div class="flex-grow">
+                                    <h4 class="font-medium text-sm lg:text-base mb-1 leading-tight">
+                                        The Best Easy One Pot Chicken and Rice
+                                    </h4>
+                                    <p class="text-gray-600 text-xs mb-0">By Andreas Paula</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advertisement -->
+                    <div
+                            class=" mx-auto md:mx-0 p-4 md:p-0  rounded-2xl relative w-full max-w-xs ">
+
+
+
+
+                        <div
+                                class="relative w-full h-85 z-[-999999]  bg-gradient-to-b from-[#357355] to-[#1D483B] rounded-2xl  top-0 right-0  flex items-center justify-center mt-4 mb-6  ">
+                            <img src="assets/Star1.png" alt="" srcset="">
+                            <h1
+                                    class="font-['Lobster'] text-2xl text-white absolute top-[33px] w-[66%] text-center left-[52px] ">
+                                Don’t forget to eat
+                                healthy food</h1>
+                            <img src="assets/01-dish.png" class="absolute top-[108px] left-[30px] w-[232px] z-30   "
+                                 srcset="">
+                            <p class=" font-['Inter'] text-[12px] text-white absolute top-[300px] left-[92px] ">
+                                www.foodieland.com</p>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="mx-auto  max-w-[1440px] min-w-[280px] py-8 md:py-32 px-8 md:px-12 lg:px-14">
+    <div class="bg-[#E7F9FD] relative rounded-3xl p-12 md:mx-8 mx-auto text-center font-['Inter'] overflow-hidden">
+        <h1 class="text-3xl md:text-5xl  text-center font-semibold tracking-tight text-balance text-gray-900  ">
+            Deliciousness to your inbox</h1>
+        <p class="text-gray-600 mb-8 max-w-xl mx-auto mt-8">
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqut enim ad minim
+        </p>
+        <form class="hidden md:flex flex-col md:flex-row max-w-md mx-auto items-center relative overflow-hidden">
+            <input type="email" placeholder="Your email address..."
+                   class="flex-1 px-6 py-4 rounded-2xl bg-white focus:outline-none   ">
+            <button
+                    class=" bg-black text-white px-8 py-3 rounded-2xl hover:bg-gray-800 transition-colors  absolute  right-1  top-1 font-semibold  text-sm md:text-base mt-10 md:mt-0 ">
+                Subscribe
+            </button>
+        </form>
+        <form class="md:hidden flex flex-col max-w-md mx-auto items-center gap-2 relative ">
+            <input type="email" placeholder="Your email address..."
+                   class="flex-1 px-6 py-4 rounded-2xl bg-white focus:outline-none   ">
+            <button
+                    class=" bg-black text-white px-8 py-3 rounded-2xl hover:bg-gray-800 transition-colors     font-semibold  text-sm md:text-base mb-3  ">
+                Subscribe
+            </button>
+        </form>
+        <div class="hidden md:flex absolute left-0 top-6/9 -translate-y-1/2 opacity-90">
+            <img
+                    src="assets/left-cta.png"
+                    alt="Fresh vegetables and ingredients"
+                    class="object-contain  md:w-50 md:h-50 "
+            />
+
+        </div>
+        <div class="hidden md:flex absolute right-0 bottom-[-30px] opacity-90   ">
+            <img
+                    src="assets/right-cta.png"
+                    alt="Fresh vegetables and ingredients"
+                    class="object-contain  md:w-50 md:h-50"
+            />
+        </div>
+    </div>
+</section>
+<!-- End CTA -->
+<footer>
+    <div class="mx-auto  max-w-[1440px] min-w-[280px] py-8 md:pt-8 px-8 md:px-12 lg:px-14">
+        <div class="flex flex-col md:flex-row justify-between items-center md:mx-12 mx-auto md:pb-6">
+            <div class="mx-auto md:mx-0 text-center md:text-left">
+                <img src="assets/Foodieland.png" alt="" class="w-32 md:w-40 mb-4 block mx-auto md:mx-0">
+                <p class="text-[#00000099]">Lorem ipsum dolor sit amet, consectetuipisicing elit, </p>
+            </div>
+            <div class="flex flex-row gap-8 mt-8 md:mt-0 ">
+
+
+                <a href="#" class=" font-semibold text-gray-900">Recipies</a>
+                <a href="#" class=" font-semibold text-gray-900">Blog</a>
+                <a href="#" class=" font-semibold text-gray-900">Contact</a>
+                <a href="#" class=" font-semibold text-gray-900">About Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="border-b border-slate-300 mb-8"></div>
+    <div class="pb-2 md:pb-8">
+        <div
+                class="mx-auto  px-8 md:px-12 lg:px-14 pt-8 text-center flex flex-col md:flex-row justify-between items-center">
+            <div class="md:w-1/3 hidden "></div>
+            <p class="flex-1 text-[#00000099]">© 2023 Foodieland. All rights reserved.</p>
+            <div class=" flex items-center  gap-x-4">
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                    <path
+                            d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z">
+                    </path>
+                </svg></a>
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                    <path
+                            d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z">
+                    </path>
+                </svg></a>
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-5" viewBox="0 0 50 50">
+                    <path
+                            d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                    </path>
+                </svg></a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+    <script>
+        // Related recipes data
+        const relatedRecipes = [
+            {
+                title: "Mixed Tropical Fruit Salad with Superfood Boosts",
+                time: "30 Minutes",
+                servings: "1 Serving",
+                category: "Healthy",
+                image: "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=300&h=200&fit=crop"
+            },
+            {
+                title: "Big and Juicy Wagyu Beef Cheeseburger",
+                time: "30 Minutes",
+                servings: "1 Serving",
+                category: "Western",
+                image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=200&fit=crop"
+            },
+            {
+                title: "Healthy Japanese Fried Rice with Asparagus",
+                time: "30 Minutes",
+                servings: "1 Serving",
+                category: "Healthy",
+                image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300&h=200&fit=crop"
+            },
+            {
+                title: "Cauliflower Walnut Vegetarian Taco Meat",
+                time: "30 Minutes",
+                servings: "1 Serving",
+                category: "Eastern",
+                image: "https://images.unsplash.com/photo-1565299585323-38174c4a6471?w=300&h=200&fit=crop"
+            }
+        ];
+
+        // Generate related recipe cards
+        function generateRelatedRecipes() {
+            const relatedGrid = document.getElementById('related-recipes');
+            relatedGrid.innerHTML = relatedRecipes.map((recipe, index) => `
+                <div class="bg-white border-0 shadow-sm rounded-lg overflow-hidden h-full hover:shadow-md transition-shadow">
+                    <div class="relative">
+                        <img src="${recipe.image}" alt="${recipe.title}" class="w-full h-28 lg:h-32 object-cover">
+                        <button onclick="toggleLike(${index})" class="absolute top-2 right-2 bg-white rounded-full p-2 shadow-sm hover:shadow-md transition-shadow heart-btn" data-index="${index}">
+                            <i data-lucide="heart" class="w-4 h-4 text-gray-400"></i>
+                        </button>
+                    </div>
+                    <div class="p-3 lg:p-4">
+                        <h5 class="font-medium text-sm lg:text-base leading-tight mb-2 lg:mb-3">${recipe.title}</h5>
+                        <div class="flex justify-between text-gray-600 text-xs mb-2">
+                            <div class="flex items-center">
+                                <i data-lucide="clock" class="w-3 h-3 mr-1"></i>
+                                <span>${recipe.time}</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="utensils" class="w-3 h-3 mr-1"></i>
+                                <span>${recipe.servings}</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex">
+                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                            </div>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">${recipe.category}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Re-initialize Lucide icons for the new content
+            lucide.createIcons();
+        }
+
+        // Toggle like functionality
+        function toggleLike(index) {
+            const heartBtn = document.querySelector(`[data-index="${index}"] i`);
+            if (heartBtn.classList.contains('text-gray-400')) {
+                heartBtn.classList.remove('text-gray-400');
+                heartBtn.classList.add('text-red-500');
+            } else {
+                heartBtn.classList.remove('text-red-500');
+                heartBtn.classList.add('text-gray-400');
+            }
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Generate related recipes
+            generateRelatedRecipes();
+
+            // Add ingredient checkbox functionality
+            document.addEventListener('change', function(e) {
+                if (e.target.classList.contains('ingredient-checkbox')) {
+                    const label = e.target.nextElementSibling;
+                    if (e.target.checked) {
+                        label.classList.add('line-through', 'text-gray-500');
+                        label.classList.remove('text-gray-600');
+                    } else {
+                        label.classList.remove('line-through', 'text-gray-500');
+                        label.classList.add('text-gray-600');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
